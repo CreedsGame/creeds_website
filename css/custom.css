@@ -1,0 +1,208 @@
+
+/* Custom stuff
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    background: #C0C0C0;
+}
+
+.character {
+    position: absolute;
+    margin-left: -60px;
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
+}
+
+.challenge-text {
+    text-shadow: 1px 3px 6px rgba(0,0,0,0.75);
+    margin-top: -60px;
+}
+
+.challenge-button {
+    margin-top: 5px;
+}
+
+#login {
+    padding: 30px 30px 30px 30px;
+    width: 305px;
+    height: 200px;
+    background-color: #191919;
+    -webkit-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    /*this to solve "the content will not be cut when the window is smaller than the content": */
+    max-width:100%;
+    max-height:100%;
+    overflow:hidden;
+}
+
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+    padding: 8rem 0 7rem;
+    text-align: center;
+}
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 5rem;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+    background-image: url('../images/separator.png');
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 5rem;
+    margin-top: -10px;
+}
+.value-heading {
+    margin-bottom: .5rem;
+    color: #CF212A;
+}
+.value-description {
+    margin-bottom: .3rem;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+    background-image: url('../images/separator-footer.png');
+    margin-top: -10px;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+    .section {
+        padding: 12rem 0 11rem;
+    }
+    .hero {
+        padding-bottom: 12rem;
+        text-align: left;
+        height: 165px;
+    }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+    .hero {
+        height: 190px;
+    }
+    .hero-heading {
+        font-size: 2.6rem;
+    }
+    .section {
+        padding: 14rem 0 15rem;
+    }
+    .hero {
+        padding: 16rem 0 14rem;
+    }
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 20rem 0 19rem;
+    }
+    .hero {
+        padding: 22rem 0;
+    }
+}
+
+
+/* Buttons (override)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    color: #FFF;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    color: #333;
+    border-color: #888;
+}
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+    color: #FFF;
+    background-color: #CF212A;
+    border-color: #CF212A;
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+    color: #FFF;
+    background-color: #A91B22;
+    border-color: #A91B22;
+}
+
+/* Forms (style for challenge form)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    background-color: #191919;
+    border: 0px;
+    border-bottom: 1px solid #D1D1D1;
+    border-radius: 0px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 0px;
+    border-bottom: 1px solid #CF212A;
+}
