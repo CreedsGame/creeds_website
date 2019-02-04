@@ -25,68 +25,39 @@
 
     <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <script src="js/site.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+
+    <!-- Directives
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/directives/ng-storage.js"></script>
+
+    <!-- Main angular app
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/creeds.js"></script>
+
+    <!-- Controllers
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/controllers/homeController.js"></script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
-<body>
+<body ng-app="creeds">
 
-    <!-- Challenge form
+    <!-- Current angular view
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="section hero">
-        <div class="container">
-            <div class="row">
-                <div class="one-half column">
-                    <div class="challenge-text"><h1><b>{nickname}</b> challenged you!</h1></div>
-                    <img class="character" src="images/character.png">
-                </div>
-                <div class="one-half column">
-                    <div id="login">
-                        <div class="form">
-                            <form autocomplete="off">
-                                <div class="row">
-                                    <input class="u-full-width" type="text" placeholder="Creed's name" id="exampleEmailInput">
-                                </div>
-                                <div class="row">
-                                    <input class="u-full-width" type="password" placeholder="Password" id="exampleEmailInput">
-                                </div>
-                                <div class="row">
-                                    <input class="u-full-width" type="password" placeholder="Repeat password" id="exampleEmailInput">
-                                </div>
-                                <div class="challenge-button"><input class="button-primary u-full-width" type="submit" value="Accept challenge"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div ng-view></div>
   
-    <!-- What is Creeds?
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="section values">
-        <div class="container">
-            <div class="row">
-                <div class="one-half column value">
-                    <h2 class="value-heading">What is Creeds?</h2>
-                    <h5 class="value-description">A fun fast-battles game, that only takes about 5 minutes a day of your time</h5><br>
-                    <input class="button" type="submit" value="Read more">
-                </div>
-                <div class="one-half column value">
-                    <img class="u-max-full-width" src="images/placeholder.png">
-                </div>
-            </div>
-        </div>
-    </div>
-  
-    <!-- Footer
+    <!-- Footer (more coming soon)
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="section footer">
         <div class="container">
             <div class="row">
+                <h2>More coming soon!</h2>
+                <h4><a href="https://github.com/CreedsGame">GitHub</a> &nbsp; <a href="https://discord.gg/CC2Heyf">Discord</a></h4>
                 Copyright © 2019 Creeds
             </div>
         </div>
