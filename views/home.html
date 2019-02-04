@@ -4,23 +4,28 @@
     <div class="container">
         <div class="row">
             <div class="one-half column">
-                <div class="challenge-text"><h1><b>{nickname}</b> challenged you!</h1></div>
+                <div class="challenge-text"><h1><b>{{ opponent.name || "" }}</b><br>challenged you!</h1></div>
                 <img class="character" src="images/character.png">
             </div>
             <div class="one-half column">
                 <div id="login">
                     <div class="form">
-                        <form autocomplete="off">
+                        <div class="character-progress" ng-show="loading">
+                            <div class="row" ng-repeat="line in progress">{{ line }}</div>
+                        </div>
+                        <form autocomplete="off" ng-show="!loading">
                             <div class="row">
-                                <input class="u-full-width" type="text" placeholder="Creed's name" id="exampleEmailInput">
+                                <input class="u-full-width submit-error" type="text" placeholder="Creed's name" ng-model="fighter.name" ng-keyup="validate(fighter)">
+                                <div class="character-error" ng-show="!name.ok">{{ name.message }}</div>
                             </div>
                             <div class="row">
-                                <input class="u-full-width" type="password" placeholder="Password" id="exampleEmailInput">
+                                <input class="u-full-width" type="password" placeholder="Password" ng-model="fighter.password" ng-keyup="validate(fighter)">
+                                <div class="character-error" ng-show="!password.ok">{{ password.message }}</div>
                             </div>
                             <div class="row">
-                                <input class="u-full-width" type="password" placeholder="Repeat password" id="exampleEmailInput">
+                                <input class="u-full-width" type="password" placeholder="Repeat password" ng-model="fighter.passwordAgain" ng-keyup="validate(fighter)">
                             </div>
-                            <div class="challenge-button"><input class="button-primary u-full-width" type="submit" value="Accept challenge"></div>
+                            <div class="challenge-button"><input class="button-primary u-full-width" type="submit" ng-click="acceptChallenge(fighter, opponent)" value="Accept challenge"></div>
                         </form>
                     </div>
                 </div>

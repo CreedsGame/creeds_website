@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="creeds">
 <head>
 
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Creeds</title>
+    <title>{{ pageTitle || "Creeds" }}</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -27,6 +27,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+    <script src="js/misc.js"></script>
 
     <!-- Directives
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -45,7 +46,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
-<body ng-app="creeds">
+<body>
 
     <!-- Current angular view
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -63,5 +64,5 @@
         </div>
     </div>
 
-  </body>
+</body>
 </html>
