@@ -4,6 +4,16 @@ body {
     background: #C0C0C0;
 }
 
+.temp-box {
+    padding: 30px 30px 30px 30px;
+    overflow-y: scroll;
+    height: 300px;
+    background-color: #191919;
+    -webkit-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+}
+
 .character {
     position: absolute;
     margin-left: -60px;
