@@ -10,10 +10,14 @@ creeds.config(['$routeProvider', '$locationProvider', function AppConfig($routeP
             templateUrl: 'views/home.html',
             controller: 'homeController'
         })
-        // .when('/battle/:battleId', {
-        //     templateUrl: 'views/battle.html',
-        //     controller: 'battleController'
-        // })
+        .when('/:characterName', {
+            templateUrl: 'views/character.html',
+            controller: 'characterController'
+        })
+        .when('/battle/:battleId', {
+            templateUrl: 'views/battle.html',
+            controller: 'battleController'
+        })
         .otherwise({
             redirectTo: '/'
         }

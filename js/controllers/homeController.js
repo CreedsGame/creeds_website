@@ -34,7 +34,7 @@ creeds.controller('homeController', ['$localStorage', '$rootScope', '$scope', '$
                     }
                     else {
                         $scope.password.ok = false;
-                        $scope.password.message = "Passwords should match";
+                        $scope.password.message = "Passwords should match!";
                     }
                 }
             }
@@ -58,7 +58,7 @@ creeds.controller('homeController', ['$localStorage', '$rootScope', '$scope', '$
             }
             else {
                 $scope.name.ok = false;
-                $scope.name.message = "Alphanumeric only";
+                $scope.name.message = "Alphanumeric only!";
             }
         }
         else {
@@ -115,6 +115,7 @@ creeds.controller('homeController', ['$localStorage', '$rootScope', '$scope', '$
         }).then(function successCallback(response) {
             $scope.progress.push("ID: " + response.data.data["id"]);
             $scope.progress.push("Redirecting...");
+            $location.path("/" + apiConfig["battle"] + "/" + response.data.data["id"]);
         }, function errorCallback(response) {
             $scope.name.ok = false;
             $scope.name.message = response.data.status_message;
