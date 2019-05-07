@@ -4,6 +4,32 @@ body {
     background: #C0C0C0;
 }
 
+.speech-bubble {
+    position: relative;
+    background: #191919;
+    border-radius: .4em;
+    padding: 30px 30px 15px 30px;
+    width: 300px;
+    -webkit-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+ }
+ 
+ .speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #191919;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
 .temp-box {
     padding: 30px 30px 30px 30px;
     overflow-y: scroll;
@@ -17,6 +43,7 @@ body {
 .character {
     position: absolute;
     margin-left: -60px;
+    margin-top: -40px;
     -webkit-animation: action 1s infinite  alternate;
     animation: action 1s infinite  alternate;
 }
@@ -24,6 +51,7 @@ body {
 .challenge-text {
     text-shadow: 1px 3px 6px rgba(0,0,0,0.75);
     margin-top: -60px;
+    margin-bottom: 20px;
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;
      -ms-animation: fadein 2s;
@@ -51,6 +79,25 @@ body {
 
 .character-progress {
     color: #757572;
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+     -ms-animation: fadein 1s;
+      -o-animation: fadein 1s;
+         animation: fadein 1s;
+}
+
+#login-unlock {
+    padding: 30px 30px 30px 30px;
+    width: 305px;
+    height: 100px;
+    background-color: #191919;
+    -webkit-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 32px -4px rgba(0,0,0,0.75);
+    /*this to solve "the content will not be cut when the window is smaller than the content": */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
      -ms-animation: fadein 1s;
@@ -114,6 +161,41 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+
+/* Ribbons */
+.cr {
+    width: 200px;
+    padding: 16px;
+    position: absolute;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.cr-sticky {
+    position: fixed;
+}
+
+/* Ribbons Positions */
+.cr-top    { top: 25px; }
+.cr-bottom { bottom: 25px; }
+.cr-left   { left: -50px; }
+.cr-right  { right: -50px; }
+
+/* Ribbons Rotations */
+.cr-top.cr-left,
+.cr-bottom.cr-right {
+    transform: rotate(-45deg);
+}
+
+.cr-top.cr-right,
+.cr-bottom.cr-left {
+    transform: rotate(45deg);
+}
+  
+/* Ribbons Colors */
+.cr-red       { background-color: #e43; }
+  
 
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -1,6 +1,6 @@
 <!-- Character information
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="section hero">
+<!-- <div class="section hero">
     <div class="container">
         <div class="temp-box">
             <div class="row">name: <span class="value-heading">{{ character.name }}</span></div>
@@ -16,6 +16,34 @@
             <div class="row">initiative: <span class="value-heading">{{ character.initiative | number }}</span></div>
             <div class="row">blocking: <span class="value-heading">{{ character.blocking | number }}</span></div>
             <div class="row">life: <span class="value-heading">{{ character.life | number }}</span></div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Challenge form
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="section hero">
+    <div class="container">
+        <div class="row">
+            <div class="one-half column">
+                <div class="challenge-text">
+                    <div class="speech-bubble"><h3>What's up, I am<br><b>{{ character.name }}</b></h3></div>
+                </div>
+                <img class="character" src="images/generic-character.png">
+            </div>
+            <div class="one-half column">
+                <div id="login-unlock">
+                    <div class="form">
+                        <form autocomplete="off" ng-show="!loading">
+                            <div class="row">
+                                <input class="u-full-width submit-error" type="text" placeholder="Type your Creed's password" ng-model="character.password">
+                                <div class="character-error" ng-show="!name.ok">{{ name.message }}</div>
+                            </div>
+                            <div class="challenge-button"><input class="button-primary u-full-width" type="submit" ng-click="loginFighter(character)" value="Unlock Creed"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

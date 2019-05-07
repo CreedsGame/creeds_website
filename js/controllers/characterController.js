@@ -1,10 +1,13 @@
 creeds.controller('characterController', ['$localStorage', '$rootScope', '$scope', '$http', 'apiConfig', '$location', '$routeParams', function ($localStorage, $rootScope, $scope, $http, apiConfig, $location, $routeParams) {
 
-    // Set current page title
-    $rootScope.pageTitle = "Creeds character";
-
     // Get character's name
     $scope.characterName = $routeParams.characterName;
+
+    // Set current page title
+    $rootScope.pageTitle = "Creeds - " + $scope.characterName;
+
+    // Initially we aren't logged in
+    $scope.loggedIn = false;
 
     // Get current character data
     getCharacterData($scope.characterName);
@@ -24,5 +27,10 @@ creeds.controller('characterController', ['$localStorage', '$rootScope', '$scope
             $location.path("/");
         });
     }
+
+    // Log in fighter
+    $scope.loginFighter = function(character) {
+        console.log(character);
+    };
 
 }]);
