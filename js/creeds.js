@@ -29,6 +29,15 @@ creeds.constant('apiConfig',
     {
         "baseUrl": "http://localhost/creeds_api/v1/",
         "character": "character",
-        "battle": "battle"
+        "battle": "battle",
+        "login": "login"
+    }
+);
+
+// Website configuration
+creeds.constant('webConfig',
+    {
+        "baseUrl": "http://localhost/",
+        "subdomainUrl": ".creeds.ml"
     }
 );
