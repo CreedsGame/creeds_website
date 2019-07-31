@@ -1,4 +1,4 @@
-// Define module
+// Define modules
 var creeds = angular.module('creeds', ['ngRoute', 'ngStorage']);
 
 // Define routes
@@ -27,7 +27,7 @@ creeds.config(['$routeProvider', '$locationProvider', function AppConfig($routeP
 // API configuration
 creeds.constant('apiConfig',
     {
-        "baseUrl": "http://localhost/creeds_api/v1/",
+        "baseUrl": "http://localhost/creeds_api/src/v1/",
         "character": "character",
         "battle": "battle",
         "login": "login"

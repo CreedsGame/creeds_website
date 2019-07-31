@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font-family: 'Hind Madurai', sans-serif;
+  color: #8B8B8B;
+  background: #F0F0F0;
+}
+
+/***********************/
+/* Creeds custom style */
+/***********************/
+
+/* Mobile menu */
+.creeds-mobile-menu {
+  color: #fff;
+  padding: 15px 20px 15px 20px;
+  font-size: 20px;
+  background: #FF4444;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+/* Login box */
+.creeds-login-box {
+  margin-top: -20px;
+  padding-top: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.creeds-login-box__title {
+  text-align: center;
+  color: #FF4444;
+  font-family: 'Righteous', serif;
+  font-size: 75px;
+}
+
+.creeds-login-box__form {
+  padding: 30px;
+  width: 300px;
+  height: 225px;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+  box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+}
+
+.creeds-login-box__login {
+  padding: 30px;
+  width: 300px;
+  height: 225px;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+  box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+}
+
+.creeds-login-box__error {
+  position: absolute;
+  font-size: small;
+  margin-top: -45px;
+  margin-right: 5px;
+  width: 290px;
+  text-align: right;
+  color: #FF4444;
+  /* -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
+  animation: fadein 1s; */
+}
+
+/* Battle box */
+
+.creeds-battle-header {
+  padding-top: 100px;
+}
+
+.creeds-battle-header__logo {
+  float: left;
+  padding-left: 15px;
+  color: #FF4444;
+  font-family: 'Righteous', serif;
+  font-size: 60px;
+}
+
+.creeds-battle-header__link {
+  float: right;
+  padding-top: 30px;
+  padding-top: 35px;
+  padding-right: 15px;
+}
+
+.creeds-battle-phaser {
+  padding: 30px;
+  background: #fff;
+  height: 300px;
+  overflow-y: scroll; /* Remove this later */
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+  box-shadow: 0px 3px 4px 0px rgba(189,189,189,1);
+}
+
+/**********************/
+/* Skeleton overrides */
+/**********************/
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #FF4444;
+  border-radius: 0px;
+  /* -webkit-filter: drop-shadow(2px 2px 20px #f008b7); */
+  border-color: #FF4444;
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #FF6262;
+  border-color: #FF6262; }
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  /* background-color: #fff; */
+  background-color: Transparent;
+  border: 1px solid #CFCFCF;
+  /* border-radius: 4px; */
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #FF4444;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-center {
+  text-align: center; }

@@ -1,0 +1,29 @@
+<!-- Mobile menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="creeds-mobile-menu">
+    <i class="fa fa-bars"></i>
+</div>
+
+<!-- Battle box
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+    <div class="row">
+        <div class="creeds-battle-header">
+            <h1 class="creeds-battle-header__logo">Creeds!</h1>
+            <div class="creeds-battle-header__link">
+                <i class="fas fa-link"></i>&nbsp; {{ battleUrl }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="creeds-battle-phaser">
+            {{ battle.fighter}} life is {{ battle.fighterLife | number }}<br>
+            {{ battle.opponent}} life is {{ battle.opponentLife | number }}<br>
+            {{ battle.starting }} goes first<br>
+            <span ng-repeat="turn in battle.turns">
+                {{ turn.executor }} {{ turn.action }} on {{ turn.receiver }} dealing {{ turn.damage | number }} damage<br>
+            </span>
+            <p>{{ battle.winner }} wins!</p>
+        </div>
+    </div>
+</div>

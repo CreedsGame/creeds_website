@@ -4,5 +4,10 @@ backup
 # vscode
 .vscode
 
+# template files
+*template*.html
+
 # TODO list
 TODO
+
+*.epgz
