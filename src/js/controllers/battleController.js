@@ -1,10 +1,13 @@
-creeds.controller('battleController', ['$localStorage', '$rootScope', '$scope', '$http', 'apiConfig', '$location', '$routeParams', function ($localStorage, $rootScope, $scope, $http, apiConfig, $location, $routeParams) {
+creeds.controller('battleController', ['$localStorage', '$rootScope', '$scope', '$http', 'apiConfig', 'webConfig', '$location', '$routeParams', function ($localStorage, $rootScope, $scope, $http, apiConfig, webConfig, $location, $routeParams) {
 
     // Set current page title
     $rootScope.pageTitle = "Creeds battle";
 
     // Get battle ID
     $scope.battleId = $routeParams.battleId;
+
+    // Build battle URL - TODO
+    $scope.battleUrl = webConfig["baseUrl"] + "creeds_website/src/#/battle/" + $routeParams.battleId;
 
     // Get current battle data
     getBattleData($scope.battleId);
